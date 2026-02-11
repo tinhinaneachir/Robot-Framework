@@ -24,10 +24,9 @@ pipeline {
         stage('Upload vers Xray') {
             steps {
                 bat """
-                curl -H "Content-Type: multipart/form-data" ^
-                     -H "Authorization: Bearer %XRAY_TOKEN%" ^
-                     -F "file=@output.xml" ^
-                     https://xray.cloud.getxray.app/api/v2/import/execution/robot
+                    curl -H "Authorization: Bearer %XRAY_TOKEN%" -F "file=@output.xml"
+                    https://xray.cloud.getxray.app/api/v2/import/execution/robot
+
                 """
             }
         }
