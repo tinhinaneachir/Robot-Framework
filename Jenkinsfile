@@ -1,28 +1,23 @@
 pipeline {
     agent any
-    
+
     stages {
-        stage('Checkout') {
+
+        stage('Installation des dependances') {
             steps {
-                checkout scm  //Git
+                bat 'pip3 install -r requirements.txt'
             }
         }
-        
-        stage('Installation des dépendances') {
+
+        stage('Execution des tests') {
             steps {
-                bat 'pip3 install -r requirements.txt'  // à la place de maven 
+                bat 'robot tests'
             }
         }
-        
-        stage('Exécution des tests') {
+
+        stage('Publication des resultats') {
             steps {
-                bat 'pip3 install -r requirements.txt' // on remplce le mvn test 
-            }
-        }
-        
-        stage('Publication des résultats') {
-            steps {
-                robot outputPath: 'results'  // c'est le plugin de robot framework
+                archiveArtifacts artifacts: '**/*.xml, **/*.html', fingerprint: true
             }
         }
     }
