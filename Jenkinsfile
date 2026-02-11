@@ -16,7 +16,7 @@ pipeline {
         
         stage('Exécution des tests') {
             steps {
-                sh 'robot --outputdir results tests/'  // on remplce le mvn test 
+                bat 'pip install -r requirements.txt'  // on remplce le mvn test 
             }
         }
         
