@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.12 on win32)" generated="2026-02-10T16:52:51.270380" rpa="false" schemaversion="5">
+<suite id="s1" name="Robotframework" source="C:\dev\robotframework">
+<suite id="s1-s1" name="Tests" source="C:\dev\robotframework\tests">
+<suite id="s1-s1-s1" name="Saucedemo Tests" source="C:\dev\robotframework\tests\saucedemo_tests.robot">
+<test id="s1-s1-s1-t1" name=" Scénario 5 - Import du test de Xray" line="58">
+<kw name="Ouvrir La Page De Connexion" owner="LoginPage" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-10T16:52:51.438051" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-10T16:52:51.437789" elapsed="1.131943"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-10T16:52:52.569949" elapsed="0.024607"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-02-10T16:52:52.594789" elapsed="0.000937"/>
+</kw>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Ouvre le navigateur et accède à la page de connexion</doc>
+<status status="PASS" start="2026-02-10T16:52:51.437185" elapsed="1.158673"/>
+</kw>
+<kw name="Open Login page">
+<msg time="2026-02-10T16:52:52.598105" level="FAIL">No keyword with name 'Open Login page' found.</msg>
+<status status="FAIL" start="2026-02-10T16:52:52.597148" elapsed="0.010561">No keyword with name 'Open Login page' found.</status>
+</kw>
+<kw name="Input valid username and password">
+<status status="NOT RUN" start="2026-02-10T16:52:52.609055" elapsed="0.001065"/>
+</kw>
+<kw name="Click login button">
+<status status="NOT RUN" start="2026-02-10T16:52:52.611324" elapsed="0.001100"/>
+</kw>
+<kw name="add product to cart">
+<status status="NOT RUN" start="2026-02-10T16:52:52.613724" elapsed="0.001023"/>
+</kw>
+<kw name="Go to Cart page">
+<status status="NOT RUN" start="2026-02-10T16:52:52.616061" elapsed="0.001122"/>
+</kw>
+<kw name="Click checkout">
+<status status="NOT RUN" start="2026-02-10T16:52:52.618266" elapsed="0.000865"/>
+</kw>
+<kw name="Fill checkout info">
+<status status="NOT RUN" start="2026-02-10T16:52:52.620114" elapsed="0.000960"/>
+</kw>
+<kw name="logout">
+<status status="NOT RUN" start="2026-02-10T16:52:52.622335" elapsed="0.000826"/>
+</kw>
+<kw name="Fermer Le Navigateur" owner="LoginPage" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-10T16:52:52.625151" elapsed="2.096273"/>
+</kw>
+<doc>Ferme le navigateur</doc>
+<status status="PASS" start="2026-02-10T16:52:52.624747" elapsed="2.097183"/>
+</kw>
+<tag>POEI2-1045</tag>
+<status status="FAIL" start="2026-02-10T16:52:51.434575" elapsed="3.288186">No keyword with name 'Open Login page' found.</status>
+</test>
+<doc>Tests d'automatisation SauceDemo</doc>
+<status status="FAIL" start="2026-02-10T16:52:51.304074" elapsed="3.429155"/>
+</suite>
+<status status="FAIL" start="2026-02-10T16:52:51.300937" elapsed="3.435346"/>
+</suite>
+<status status="FAIL" start="2026-02-10T16:52:51.274396" elapsed="3.464295"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">POEI2-1045</stat>
+</tag>
+<suite>
+<stat name="Robotframework" id="s1" pass="0" fail="1" skip="0">Robotframework</stat>
+<stat name="Tests" id="s1-s1" pass="0" fail="1" skip="0">Robotframework.Tests</stat>
+<stat name="Saucedemo Tests" id="s1-s1-s1" pass="0" fail="1" skip="0">Robotframework.Tests.Saucedemo Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
