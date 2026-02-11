@@ -14,11 +14,5 @@ pipeline {
                 bat 'robot tests'
             }
         }
-
-        stage('Publication des resultats') {
-            steps {
-                archiveArtifacts artifacts: '**/*.xml, **/*.html', fingerprint: true
-            }
-        }
     }
 }
