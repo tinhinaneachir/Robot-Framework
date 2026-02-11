@@ -1,11 +1,12 @@
 pipeline {
     agent any
 
-        environment {
-        XRAY_TOKEN = credentials('XRAY_TOKEN') //token de jenkins
+    environment {
+        XRAY_TOKEN = credentials('XRAY_TOKEN')
     }
 
     stages {
+
         stage('Installation des dépendances') {
             steps {
                 bat 'pip3 install -r requirements.txt'
@@ -14,7 +15,9 @@ pipeline {
 
         stage('Exécution des tests') {
             steps {
-                bat 'robot --output results.xml tests'
+                catchError(buildResult: 'UNSTABLE', stageResult: 'UNSTABLE') {
+                    bat 'robot --output output.xml tests'
+                }
             }
         }
 
@@ -27,6 +30,24 @@ pipeline {
                      https://xray.cloud.getxray.app/api/v2/import/execution/robot
                 """
             }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'output.xml, report.html, log.html', fingerprint: true
+        }
+
+        success {
+            echo 'Pipeline terminée avec succès !'
+        }
+
+        unstable {
+            echo 'Certains tests ont échoué, mais les résultats ont été envoyés à Xray.'
+        }
+
+        failure {
+            echo 'La pipeline a échoué de manière critique.'
         }
     }
 }
