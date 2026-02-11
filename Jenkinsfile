@@ -16,7 +16,7 @@ pipeline {
         
         stage('Exécution des tests') {
             steps {
-                bat 'pip install -r requirements.txt'  // on remplce le mvn test 
+                bat bat 'pip3 install -r tests/requirements.txt' // on remplce le mvn test 
             }
         }
         
