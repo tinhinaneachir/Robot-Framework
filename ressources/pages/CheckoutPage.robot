@@ -9,7 +9,7 @@ ${LAST_NAME_FIELD}        id:last-name
 ${POSTAL_CODE_FIELD}      id:postal-code
 ${CONTINUE_BUTTON}        id:continue
 ${FINISH_BUTTON}          id:finish
-${CONFIRMATION_MESSAGE}   css:.complete-header
+${CONFIRMATION_MESSAGE}   css:.complete-header 60s
 
 *** Keywords ***
 Aller Au Panier

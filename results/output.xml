@@ -1,131 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.13.12 on win32)" generated="2026-02-11T10:08:35.930072" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.13.12 on win32)" generated="2026-02-11T12:02:57.049527" rpa="false" schemaversion="5">
 <suite id="s1" name="Robotframework" source="C:\dev\robotframework">
 <suite id="s1-s1" name="Tests" source="C:\dev\robotframework\tests">
-<suite id="s1-s1-s1" name="Saucedemo Tests" source="C:\dev\robotframework\tests\saucedemo_tests.robot">
-<test id="s1-s1-s1-t1" name="Scénario 5 - Import du test de Xray" line="60">
+<suite id="s1-s1-s1" name="Saucedemo Teststag" source="C:\dev\robotframework\tests\saucedemo_teststag.robot">
+<test id="s1-s1-s1-t1" name="Scénario 1 - Import result xray" line="13">
 <kw name="Ouvrir La Page De Connexion" owner="LoginPage" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-11T10:08:36.104742" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2026-02-11T12:02:57.228406" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-11T10:08:36.104486" elapsed="0.808969"/>
+<status status="PASS" start="2026-02-11T12:02:57.228146" elapsed="4.240621"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-11T10:08:36.913680" elapsed="0.026767"/>
+<status status="PASS" start="2026-02-11T12:03:01.469050" elapsed="0.027617"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2026-02-11T10:08:36.940659" elapsed="0.000950"/>
+<status status="PASS" start="2026-02-11T12:03:01.497252" elapsed="0.003026"/>
 </kw>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Ouvre le navigateur et accède à la page de connexion</doc>
-<status status="PASS" start="2026-02-11T10:08:36.103821" elapsed="0.837938"/>
+<status status="PASS" start="2026-02-11T12:02:57.227537" elapsed="4.272929"/>
 </kw>
 <kw name="Saisir Le Nom Utilisateur" owner="LoginPage">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-02-11T10:08:36.942879" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<msg time="2026-02-11T12:03:01.503545" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
 <arg>${USERNAME_FIELD}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-11T10:08:36.942556" elapsed="0.077402"/>
+<status status="PASS" start="2026-02-11T12:03:01.502222" elapsed="0.157597"/>
 </kw>
 <arg>${VALID_USERNAME}</arg>
 <doc>Saisit le nom d'utilisateur dans le champ</doc>
-<status status="PASS" start="2026-02-11T10:08:36.942198" elapsed="0.077925"/>
+<status status="PASS" start="2026-02-11T12:03:01.500949" elapsed="0.159089"/>
 </kw>
 <kw name="Saisir Le Mot De Passe" owner="LoginPage">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-02-11T10:08:37.021043" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<msg time="2026-02-11T12:03:01.661348" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-11T10:08:37.020815" elapsed="0.059088"/>
+<status status="PASS" start="2026-02-11T12:03:01.660965" elapsed="0.114793"/>
 </kw>
 <arg>${VALID_PASSWORD}</arg>
 <doc>Saisit le mot de passe dans le champ</doc>
-<status status="PASS" start="2026-02-11T10:08:37.020465" elapsed="0.059591"/>
+<status status="PASS" start="2026-02-11T12:03:01.660427" elapsed="0.115577"/>
 </kw>
 <kw name="Cliquer Sur Le Bouton Login" owner="LoginPage">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-02-11T10:08:37.080939" level="INFO">Clicking button 'id:login-button'.</msg>
+<msg time="2026-02-11T12:03:01.777488" level="INFO">Clicking button 'id:login-button'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-11T10:08:37.080726" elapsed="0.067014"/>
+<status status="PASS" start="2026-02-11T12:03:01.777156" elapsed="0.133376"/>
 </kw>
 <doc>Clique sur le bouton de connexion</doc>
-<status status="PASS" start="2026-02-11T10:08:37.080430" elapsed="0.067461"/>
+<status status="PASS" start="2026-02-11T12:03:01.776523" elapsed="0.134409"/>
 </kw>
 <kw name="Vérifier Page Produits Affichée" owner="ProductPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${PAGE_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-11T10:08:37.148933" elapsed="0.068450"/>
+<status status="PASS" start="2026-02-11T12:03:01.912623" elapsed="0.029836"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2026-02-11T10:08:37.217909" level="INFO">Verifying element 'css:.title' contains exact text 'Products'.</msg>
+<msg time="2026-02-11T12:03:01.943893" level="INFO">Verifying element 'css:.title' contains exact text 'Products'.</msg>
 <arg>${PAGE_TITLE}</arg>
 <arg>Products</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2026-02-11T10:08:37.217588" elapsed="0.017902"/>
+<status status="PASS" start="2026-02-11T12:03:01.942974" elapsed="0.030029"/>
 </kw>
 <doc>Vérifie que la page des produits est bien affichée</doc>
-<status status="PASS" start="2026-02-11T10:08:37.148536" elapsed="0.087104"/>
+<status status="PASS" start="2026-02-11T12:03:01.911966" elapsed="0.061450"/>
 </kw>
 <kw name="Ajouter Un Produit Au Panier" owner="ProductPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ADD_TO_CART_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-11T10:08:37.236439" elapsed="0.012745"/>
+<status status="PASS" start="2026-02-11T12:03:01.975306" elapsed="0.027992"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-02-11T10:08:37.249738" level="INFO">Clicking button 'css:.btn_inventory:first-of-type'.</msg>
+<msg time="2026-02-11T12:03:02.004795" level="INFO">Clicking button 'css:.btn_inventory:first-of-type'.</msg>
 <arg>${ADD_TO_CART_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-11T10:08:37.249410" elapsed="0.086543"/>
+<status status="PASS" start="2026-02-11T12:03:02.003870" elapsed="0.191627"/>
 </kw>
 <doc>Clique sur le bouton "Add to cart" du premier produit</doc>
-<status status="PASS" start="2026-02-11T10:08:37.236077" elapsed="0.100021"/>
+<status status="PASS" start="2026-02-11T12:03:01.974320" elapsed="0.221579"/>
 </kw>
 <kw name="Vérifier Ecran De Confirmation" owner="CheckoutPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2026-02-11T10:08:57.654135" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-02-11T10:08:57.654385" level="FAIL">Element 'css:.complete-header' not visible after 20 seconds.</msg>
+<msg time="2026-02-11T12:03:22.480889" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-11T12:03:22.481145" level="FAIL">Element 'css:.complete-header' not visible after 20 seconds.</msg>
 <arg>${CONFIRMATION_MESSAGE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2026-02-11T10:08:37.336747" elapsed="20.352119">Element 'css:.complete-header' not visible after 20 seconds.</status>
+<status status="FAIL" start="2026-02-11T12:03:02.197371" elapsed="20.289136">Element 'css:.complete-header' not visible after 20 seconds.</status>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
 <arg>${CONFIRMATION_MESSAGE}</arg>
 <arg>Thank you for your order!</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="NOT RUN" start="2026-02-11T10:08:57.689057" elapsed="0.000113"/>
+<status status="NOT RUN" start="2026-02-11T12:03:22.486682" elapsed="0.000121"/>
 </kw>
 <doc>Vérifie que l'écran de confirmation est affiché</doc>
-<status status="FAIL" start="2026-02-11T10:08:37.336440" elapsed="20.352848">Element 'css:.complete-header' not visible after 20 seconds.</status>
+<status status="FAIL" start="2026-02-11T12:03:02.196672" elapsed="20.290251">Element 'css:.complete-header' not visible after 20 seconds.</status>
 </kw>
 <kw name="Fermer Le Navigateur" owner="LoginPage" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-11T10:08:57.690055" elapsed="2.152829"/>
+<status status="PASS" start="2026-02-11T12:03:22.487693" elapsed="2.136873"/>
 </kw>
 <doc>Ferme le navigateur</doc>
-<status status="PASS" start="2026-02-11T10:08:57.689801" elapsed="2.153502"/>
+<status status="PASS" start="2026-02-11T12:03:22.487402" elapsed="2.137560"/>
 </kw>
 <doc>Import résulats vers Xray</doc>
 <tag>POEI2-1045</tag>
-<status status="FAIL" start="2026-02-11T10:08:36.101049" elapsed="23.742987">Element 'css:.complete-header' not visible after 20 seconds.</status>
+<status status="FAIL" start="2026-02-11T12:02:57.224763" elapsed="27.400890">Element 'css:.complete-header' not visible after 20 seconds.</status>
 </test>
 <doc>Tests d'automatisation SauceDemo</doc>
-<status status="FAIL" start="2026-02-11T10:08:35.964706" elapsed="23.892470"/>
+<status status="FAIL" start="2026-02-11T12:02:57.083063" elapsed="27.554350"/>
 </suite>
-<status status="FAIL" start="2026-02-11T10:08:35.961880" elapsed="23.901083"/>
+<status status="FAIL" start="2026-02-11T12:02:57.079748" elapsed="27.560994"/>
 </suite>
-<status status="FAIL" start="2026-02-11T10:08:35.933896" elapsed="23.931532"/>
+<status status="FAIL" start="2026-02-11T12:02:57.053136" elapsed="27.589950"/>
 </suite>
 <statistics>
 <total>
@@ -137,7 +137,7 @@
 <suite>
 <stat name="Robotframework" id="s1" pass="0" fail="1" skip="0">Robotframework</stat>
 <stat name="Tests" id="s1-s1" pass="0" fail="1" skip="0">Robotframework.Tests</stat>
-<stat name="Saucedemo Tests" id="s1-s1-s1" pass="0" fail="1" skip="0">Robotframework.Tests.Saucedemo Tests</stat>
+<stat name="Saucedemo Teststag" id="s1-s1-s1" pass="0" fail="1" skip="0">Robotframework.Tests.Saucedemo Teststag</stat>
 </suite>
 </statistics>
 <errors>
