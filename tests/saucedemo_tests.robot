@@ -41,6 +41,7 @@ Scénario 3 - Ajout Produit Au Panier
 Scénario 4 - Finalisation De Commande
     [Documentation]    Vérifier le processus complet de finalisation de commande
     
+
     Saisir Le Nom Utilisateur    ${VALID_USERNAME}
     Saisir Le Mot De Passe        ${VALID_PASSWORD}
     Cliquer Sur Le Bouton Login
@@ -55,13 +56,13 @@ Scénario 4 - Finalisation De Commande
     Vérifier Ecran De Confirmation
 
 
- Scénario 5 - Import du test de Xray
+
+Scénario 5 - Import du test de Xray
+    [Documentation]    Import résulats vers Xray
     [Tags]  POEI2-1045
-        Open Login page
-        Input valid username and password
-        Click login button
-        add product to cart
-        Go to Cart page 
-        Click checkout
-        Fill checkout info
-        logout
+        Saisir Le Nom Utilisateur    ${VALID_USERNAME}
+        Saisir Le Mot De Passe        ${VALID_PASSWORD}
+        Cliquer Sur Le Bouton Login
+        Vérifier Page Produits Affichée
+        Ajouter Un Produit Au Panier
+        Vérifier Ecran De Confirmation 
