@@ -10,7 +10,7 @@ pipeline {
         
         stage('Installation des dépendances') {
             steps {
-                sh 'pip3 install -r requirements.txt'  // à la place de maven 
+                bat 'pip3 install -r requirements.txt'  // à la place de maven 
             }
         }
         
