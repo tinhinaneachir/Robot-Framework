@@ -38,19 +38,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            archiveArtifacts artifacts: 'output.xml, report.html, log.html', fingerprint: true
-        }
-        success {
-            echo 'Pipeline terminée avec succès !'
-        }
-        unstable {
-            echo 'Certains tests ont échoué, mais les résultats ont été envoyés à Xray.'
-        }
-        failure {
-            echo 'La pipeline a échoué de manière critique.'
-        }
-    }
 }
